@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Блог</title>
+        <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/public/style/style.css" />
+    </head>
+</head>
+<body>
+<header>
+    <nav id="navbar" class="navbar navbar-expand-lg ">
+        <div class="d-flex justify-content-between flex-wrap mx-4 w-100">
+            <a href="/1" class="navbar-brand" data-link><span>Блог №415</span></a>
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/1" class="nav-link active" data-link>Посты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/authors" class="nav-link" data-link type="text/html">Авторы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/groups" class=" nav-link" data-link>Группы</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+
+                    </li>
+                    <li class="nav-item">
+                        <span id="logout" class=" nav-link">Выйти</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login" class=" nav-link" data-link>Вход</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/register" class=" nav-link" data-link>Регистрация</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/profile" class=" nav-link" data-link>Мой профиль</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main><div class="container my-5 py-5 px-5">
+    <form id="login-form">
+        <div class="mb-3">
+            <label for="email" class="form-label">Логин</label>
+            <input type="text" class="form-control" name="email" id="email">
+        </div>
+        <div class="mb-4">
+            <label for="password" class="form-label">Пароль</label>
+            <input type="password" class="form-control" name="Password" id="password">
+        </div>
+        <button type="submit" class=" btn btn-primary  py-3 px-4">Войти</button>
+
+        <a href="/register" class=" btn btn-primary  ms-2 py-3" data-link>Зарегистрироваться</a>
+    </form>
+</div>
+</main>
+<script src="public/scripts/login.js" type="module"></script>
+<script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/libs/jquery/jquery-3.6.1.min.js"></script>
+<script src="/libs/jquery/validate/jquery.validate.min.js"></script>
+</body>
+</html>
