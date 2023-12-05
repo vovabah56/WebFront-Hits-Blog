@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Блог</title>
-        <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="/public/style/style.css" />
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ураааааааааааа</title>
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css"/>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css"
+    />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/public/styles/posts.css"/>
 </head>
 <body>
 <header>
-    <nav id="navbar" class="navbar navbar-expand-lg ">
+    <nav id="navbar" class="unauthorized navbar navbar-expand-lg ">
         <div class="d-flex justify-content-between flex-wrap mx-4 w-100">
-            <a href="/1" class="navbar-brand" data-link><span>Блог №415</span></a>
+            <a href="/1" class="navbar-brand" data-link><span>Posts</span></a>
             <button
                     class="navbar-toggler"
                     type="button"
@@ -35,45 +40,38 @@
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-
+                <span class="link-for-authorized nav-link "
+                >Авторизован как - <span id="user-name"></span
+                ></span>
                     </li>
                     <li class="nav-item">
-                        <span id="logout" class=" nav-link">Выйти</span>
+                        <span id="logout" class="link-for-authorized nav-link">Выйти</span>
                     </li>
                     <li class="nav-item">
-                        <a href="/login" class=" nav-link" data-link>Вход</a>
+                        <a href="/login" class="link-for-unauthorized nav-link" data-link>Вход</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/register" class=" nav-link" data-link>Регистрация</a>
+                        <a href="/register" class="link-for-unauthorized nav-link" data-link>Регистрация</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/profile" class=" nav-link" data-link>Мой профиль</a>
+                        <a href="/profile" class="link-for-authorized nav-link" data-link>Мой профиль</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-
-<main><div class="container my-5 py-5 px-5">
-    <form id="login-form">
-        <div class="mb-3">
-            <label for="email" class="form-label">Логин</label>
-            <input type="text" class="form-control" name="email" id="email">
-        </div>
-        <div class="mb-4">
-            <label for="password" class="form-label">Пароль</label>
-            <input type="password" class="form-control" name="Password" id="password">
-        </div>
-        <button type="submit" class=" btn btn-primary  py-3 px-4">Войти</button>
-
-        <a href="/register" class=" btn btn-primary  ms-2 py-3" data-link>Зарегистрироваться</a>
-    </form>
-</div>
-</main>
-<script src="public/scripts/login.js" type="module"></script>
+<main></main>
 <script src="/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/libs/jquery/jquery-3.6.1.min.js"></script>
 <script src="/libs/jquery/validate/jquery.validate.min.js"></script>
+<script src="/libs/moment/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+<script src="/public/scripts/url-router.js" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+
 </body>
 </html>
