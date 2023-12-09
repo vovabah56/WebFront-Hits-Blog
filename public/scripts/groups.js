@@ -1,4 +1,4 @@
-import {ApiService} from "../../../untitled/public/scripts/ApiService.js";
+import {ApiService} from "./ApiService.js";
 
 
 function createGroupCard(group, template) {

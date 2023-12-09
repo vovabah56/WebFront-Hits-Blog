@@ -35,6 +35,7 @@ function createBasicAuthorCard(author, template) {
 }
 
 function addAuthorsCards(container, authors, template) {
+
     for (let author of authors) {
         let authorCard = createBasicAuthorCard(author, template);
         container.append(authorCard);

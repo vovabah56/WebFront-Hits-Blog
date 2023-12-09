@@ -1,6 +1,6 @@
-import AbstractView from "../../../../untitled/public/scripts/viewsjs/AbstractView.js";
+import AbstractView from "./AbstractView.js";
 
-import { loadNavbar } from "../../../../untitled/public/scripts/navbar.js";
+import { loadNavbar } from "../navbar.js";
 import {loadGroups} from "../groups.js";
 export default class extends AbstractView {
     constructor(params) {

@@ -1,6 +1,8 @@
 import Login from './viewsjs/login-view.js';
 import signupView from "./viewsjs/signup-view.js";
-
+import groupsView from "./viewsjs/groups-view.js";
+import authorsView from "./viewsjs/autors-view.js";
+import postsView from "./viewsjs/posts-view.js";
 $(window).bind('popstate', router);
 
 
@@ -41,6 +43,12 @@ function getParams(match) {
 const routes = [
     { path: '/login', view: Login },
     {path: '/register', view: signupView},
+    {path: '/groups', view: groupsView},
+    {path: '/authors', view: authorsView},
+    {path: '/:pageNum', view: postsView},
+
+
+
 ];
 async function router() {
 

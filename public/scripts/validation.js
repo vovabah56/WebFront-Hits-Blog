@@ -9,7 +9,7 @@ export function validateForm() {
 
     $("form").validate({
         rules: {
-            userName: {
+            fullName: {
                 required: true,
                 correct: true,
             },
@@ -18,10 +18,8 @@ export function validateForm() {
                 minlength: 6
             },
             loginPassword: "required",
-            confirmPassword: {
+            phoneNumber: {
                 required: true,
-                minlength: 6,
-                equalTo: "#password" 
             },
             email: {
                 required: true,
@@ -35,18 +33,16 @@ export function validateForm() {
             reviewText: "required",
         },
         messages: {
-            userName: {
-                required: "Введите логин",
+            fullName: {
+                required: "Введите имя",
             },
             signupPassword: {
                 required: "Введите пароль",
                 minlength: "Минимальная длина пароля - 6 символов"
             },
             loginPassword: "Введите пароль",
-            confirmPassword: {
-                required: "Введите пароль",
-                minlength: "Минимальная длина пароля - 6 символов",
-                equalTo: "Пароль не совпадает"
+            phoneNumber:{
+                required: "Введите номер телефона"
             },
             email: {
                 required: "Введите email",
