@@ -198,4 +198,22 @@ export class ApiService {
     getNestedComments(commentId){
         return this.get(`/comment/${commentId}/tree`);
     }
+
+    postCreatePost(content){
+        return this.postWithBody(`/post`, content)
+    }
+
+    deleteComment(commentId){
+        return this.delete(`/comment/${commentId}`);
+    }
+
+    putEditComment(commentId, editContent){
+        return this.put(`/comment/${commentId}`, editContent)
+    }
+
+    putEditProfile(objectData){
+        return this.put(`/account/profile`, objectData)
+    }
+
+
 }

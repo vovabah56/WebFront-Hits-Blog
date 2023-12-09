@@ -3,6 +3,9 @@ import signupView from "./viewsjs/signup-view.js";
 import groupsView from "./viewsjs/groups-view.js";
 import authorsView from "./viewsjs/autors-view.js";
 import postsView from "./viewsjs/posts-view.js";
+import profileView from "./viewsjs/profile-view.js";
+
+
 $(window).bind('popstate', router);
 
 
@@ -46,6 +49,7 @@ const routes = [
     {path: '/groups', view: groupsView},
     {path: '/authors', view: authorsView},
     {path: '/:pageNum', view: postsView},
+    {path: '/profile', view: profileView},
 
 
 
