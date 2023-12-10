@@ -58,8 +58,6 @@ const routes = [
 ];
 async function router() {
 
-
-
     const potentialMatches = routes.map((route) => {
         return {
             route: route,

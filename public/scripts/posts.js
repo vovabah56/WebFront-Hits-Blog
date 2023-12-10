@@ -64,8 +64,8 @@ function addPostsCards(container, posts, template) {
     }
 }
 
-export function createBasicPostCard(movie, template) {
-    let post = movie
+export function createBasicPostCard(post, template) {
+
     let postCard = template.clone();
     postCard.removeAttr("id");
     postCard.removeClass("d-none")
