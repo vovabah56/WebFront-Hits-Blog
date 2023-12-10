@@ -1,5 +1,5 @@
 import {ApiService} from "./ApiService.js";
-import {changePage, getObjectFromInputs} from "./common.js";
+import {changePage, getObjectFromInputs} from "./helper.js";
 import {validateForm} from "./validation.js";
 
 
