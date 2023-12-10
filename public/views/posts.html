@@ -1,5 +1,5 @@
 <div class="container  border-bottom">
-    <div class="post card hoverable my-1 d-none" id="card-template">
+    <div class="post card hoverable my-1 d-none mx-auto" id="card-template">
         <div class="card-body">
             <div class="">
                 <div class="details">
@@ -16,6 +16,7 @@
                             <img src="" class="img-fluid post-photo">
                         </div>
                         <p class="description"></p>
+                        <button class="btn btn-link p-0 mb-1  readMoreBtn">Читать полностью</button>
                         <p class="tags text-secondary"></p>
                         <p class="attribute">Время чтения:</p>
                         <p class="time-reading"></p>
@@ -85,7 +86,7 @@
                     <div class="col mb-3">
                         <div class="col">
                             <label for="min-read-time" class="form-label">Время чтения от</label>
-                            <input type="number" class="form-control" name="min-read-time" id="min-read-time">
+                            <input type="number" class="form-control" name="minreadtime" id="min-read-time">
                         </div>
                     </div>
                     <div class="col mb-3">
@@ -109,64 +110,6 @@
             </form>
         </div>
     </div>
-
-
-    <!--<div class=" card my-5  ">
-        <div class="card-header">Фильтры</div>
-        <form id="filter-form">
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="author" class="form-label">Выбор автора</label>
-                    <input type="text" class="form-control" name="author" id="author">
-                </div>
-            </div>
-            <div id="sort_col_post" class="col">
-                <div class="w-100 me-auto bd-highlight">
-                    <select class="selectpicker show-tick border" data-width="100%">
-                        <option selected>А-Я</option>
-                        <option>Я-А</option>
-                        <option>По возрастания цены</option>
-                        <option>По убыванию цены</option>
-                        <option>По возрастания рейтинга</option>
-                        <option>По убыванию рейтинга</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col">
-                <div class="h-100 w-100 me-auto d-flex bd-highlight align-items-center">
-                    <div class="w-100 me-auto bd-highlight form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="my-com-switch">
-                        <label class="form-check-label" for="my-com-switch">Показать только мои комьюнити</label>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="min-read-time" class="form-label">Время чтения от</label>
-                    <input type="number" class="form-control" name="min-read-time" id="min-read-time">
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col">
-                    <label for="max-read-time" class="form-label">Время чтения до</label>
-                    <input type="number" class="form-control" name="max-read-time" id="max-read-time">
-                </div>
-            </div>
-            <div id="tag-col" class="col">
-                <select class="selectpicker border" multiple title="Выберите Тэг" data-width="100%">
-                    <option>WOK</option>
-                    <option>Пицца</option>
-                    <option>Суп</option>
-                    <option>Десерт</option>
-                    <option>Напитки</option>
-                </select>
-            </div>
-
-
-            <button id="signup-submit" type="submit" class="gray btn btn-primary py-3">Применить</button>
-        </form>
-
-    </div>-->
 
 
     <div id="posts"></div>
