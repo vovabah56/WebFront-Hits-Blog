@@ -18,12 +18,12 @@ export function validateForm() {
                 minlength: 6
             },
             loginPassword: "required",
-            phoneNumber: {
-                required: true,
-            },
             email: {
                 required: true,
                 email: true
+            },
+            phoneNumber: {
+                required: true,
             },
             name: "required",
             birthDate: {
@@ -41,16 +41,16 @@ export function validateForm() {
                 minlength: "Минимальная длина пароля - 6 символов"
             },
             loginPassword: "Введите пароль",
-            phoneNumber:{
-                required: "Введите номер телефона"
-            },
+
             email: {
                 required: "Введите email",
                 email: "Введите корректный email"
             },
-            name: "Введите ФИО",
             birthDate: {
                 required: "Введите дату рождения",
+            },
+            phoneNumber:{
+                required: "Введите номер телефона"
             },
             reviewText: "Введите текст отзыва",
         }

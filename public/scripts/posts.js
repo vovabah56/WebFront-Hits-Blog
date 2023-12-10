@@ -64,6 +64,8 @@ function addPostsCards(container, posts, template) {
     for (let post of posts) {
         let postCard = createBasicPostCard(post, template);
         postCard.find(".post-link").attr("href", `/post/${post.id}`);
+        postCard.find(".comment-link").attr("href", `/post/${post.id}`);
+
         container.append(postCard);
     }
 }
