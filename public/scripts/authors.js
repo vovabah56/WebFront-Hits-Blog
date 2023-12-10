@@ -35,9 +35,58 @@ function createBasicAuthorCard(author, template) {
 }
 
 function addAuthorsCards(container, authors, template) {
+    console.log(authors)
+
+    let top = addCrown(authors);
+
 
     for (let author of authors) {
         let authorCard = createBasicAuthorCard(author, template);
+        authorCard.find(".author-link").attr("href", `/?author=${author.fullName}`)
+        if(Object.values(top).includes(author)){
+            switch (Object.values(top).indexOf(author)){
+                case 0:
+                    authorCard.find(".gold").removeClass("d-none");
+                    break;
+                case 1:
+                    authorCard.find(".gray").removeClass("d-none");
+                    break;
+                case 2:
+                    authorCard.find(".black").removeClass("d-none");
+                    break;
+
+            }
+        }
         container.append(authorCard);
     }
+}
+
+function sortByPostsAndLikesDescending(a, b) {
+    // Сравниваем по posts
+    if (a.posts > b.posts) {
+        return -1;
+    } else if (a.posts < b.posts) {
+        return 1;
+    } else {
+        // Если posts равны, сравниваем по likes
+        if (a.likes > b.likes) {
+            return -1;
+        } else if (a.likes < b.likes) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+}
+function addCrown(authors){
+    const sortedData = [...authors].sort(sortByPostsAndLikesDescending);
+    let data = {}
+
+    for (let i in sortedData){
+        if(i>2){
+            return data
+        }
+        data[i] = sortedData[i]
+    }
+    return data
 }

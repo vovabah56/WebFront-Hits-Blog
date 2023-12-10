@@ -45,6 +45,7 @@ function getParams(match) {
 }
 
 const routes = [
+    {path: '/', view: postsView},
     { path: '/login', view: Login },
     {path: '/register', view: signupView},
     {path: '/groups', view: groupsView},
