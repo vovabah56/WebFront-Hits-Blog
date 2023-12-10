@@ -7,6 +7,7 @@ function createGroupCard(group, template) {
     groupCard.removeAttr("id");
     groupCard.removeClass("d-none");
     if (group.name) groupCard.find(".fullname").text(group.name);
+    groupCard.find("#link-group").attr("href", `/community/${group.id}`)
     const api = new ApiService()
 
 
@@ -46,9 +47,7 @@ function createGroupCard(group, template) {
     return groupCard;
 }
 
-function subscribeOnGroup(groupId, card) {
 
-}
 
 function addGroupsCards(container, groups, template) {
     for (let group of groups) {

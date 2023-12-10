@@ -1,5 +1,4 @@
 import {ApiService} from "./ApiService.js";
-import {validateForm} from "./validation.js";
 
 
 
@@ -7,8 +6,7 @@ export function loadPosts(currentPage, parametr) {
 
     const apiService = new ApiService();
     let answer
-    console.log(parametr)
-    console.log(parametr.type)
+
     delete parametr["page"]
     console.log(parametr)
     let url = $.param(parametr)

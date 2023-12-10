@@ -12,7 +12,7 @@ export default class extends AbstractView {
     start() {
         loadNavbar();
         console.log(this.params);
-        loadPosts(this.params.pageNum ? parseInt(this.params.pageNum) : 1);
+        loadPosts(this.params.page ? parseInt(this.params.page) : 1, this.params);
         submitFilterForm()
     }
 }

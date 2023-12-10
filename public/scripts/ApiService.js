@@ -215,5 +215,16 @@ export class ApiService {
         return this.put(`/account/profile`, objectData)
     }
 
+    getAddressChain(addressId){
+        return this.get(`/address/chain?objectGuid=${addressId}`)
+    }
+
+    getCommunity(id){
+        return this.get(`/community/${id}`)
+    }
+
+    getCommunityPosts(id, param){
+        return this.get(`/community/${id}/post?${param}`)
+    }
 
 }

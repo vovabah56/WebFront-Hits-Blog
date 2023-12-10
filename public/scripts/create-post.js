@@ -1,5 +1,5 @@
 import {ApiService} from "./ApiService.js";
-import {getObjectFromInputs} from "./common.js";
+import {getObjectFromInputs} from "./helper.js";
 
 
 
