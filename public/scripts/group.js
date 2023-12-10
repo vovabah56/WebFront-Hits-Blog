@@ -10,6 +10,37 @@ function createGroupInfo(group) {
     } else {
         groupCard.find(".community-type").text("Закрытая")
     }
+    const api = new ApiService()
+    let role = api.getRoleInGroup(group.id);
+    role.then((data) => {
+        if (data.body) {
+
+            if (data.body === "Administrator") {
+
+            } else if (data.body === "Subscriber") {
+
+                groupCard.find(".unsubscribe").removeClass("d-none");
+            }
+
+        } else if (data.error) {
+
+        } else {
+
+            groupCard.find(".subscribe").removeClass("d-none")
+        }
+
+    });
+    groupCard.find(".unsubscribe").click(() => {
+        api.deleteUnSubscribeOnGroup(group.id);
+        groupCard.find(".subscribe").removeClass("d-none");
+        groupCard.find(".unsubscribe").addClass("d-none")
+    })
+
+    groupCard.find(".subscribe").click(() => {
+        api.postSubscribeOnGroup(group.id);
+        groupCard.find(".unsubscribe").removeClass("d-none");
+        groupCard.find(".subscribe").addClass("d-none")
+    })
     if(group.description) groupCard.find(".description").text(group.description);
     if(group.administrators) {
 
