@@ -17,8 +17,11 @@ function submitAnswerCommentForm(input, parentId, form) {
         if (objectData) {
             let answer = apiService.postCreateComment(postId, objectData);
             answer.then((data) => {
+                location.reload();
+
                 if (data.body) {
                     console.log(data);
+
                 } else if (data.error) {
                     console.log(data);
                 }
@@ -51,6 +54,7 @@ let infoUser = null;
 function createMapComment(comments) {
     const apiService = new ApiService()
     let elemtntComments = $("#commentList");
+
     let templateRoot = $(".template-comment")
     let templateNested = $(".sub-comments")
     let userAnswer = apiService.getProfileInfo();
@@ -73,7 +77,7 @@ function createMapComment(comments) {
     }
 }
 
-function confirmEditComment(input, commentId, form) {
+function submitEditComment(input, commentId, form) {
     const apiService = new ApiService();
 
     form.submit(function (event) {
@@ -87,6 +91,7 @@ function confirmEditComment(input, commentId, form) {
         if (objectData) {
             let answer = apiService.putEditComment(commentId, objectData);
             answer.then((data) => {
+                location.reload();
                 if (data.body) {
                     console.log(data);
                 } else if (data.error) {
@@ -122,7 +127,7 @@ function createConcreateComment1(commentRootAndNested, templateRoot, templateNes
                     commentCard.find(".edit-row").text(root.content)
                 }
             )
-            confirmEditComment(commentCard.find(".edit-row"), root.id, commentCard.find(".commentEditForm"))
+            submitEditComment(commentCard.find(".edit-row"), root.id, commentCard.find(".commentEditForm"))
         }
     }
     if (root.createTime) {
@@ -173,7 +178,7 @@ function createConcreateComment1(commentRootAndNested, templateRoot, templateNes
                         nestedCard.find(".edit-row").text(nestedElement.content)
                     }
                 )
-                confirmEditComment(nestedCard.find(".edit-row"), nestedElement.id, nestedCard.find(".commentEditForm-nested"))
+                submitEditComment(nestedCard.find(".edit-row"), nestedElement.id, nestedCard.find(".commentEditForm-nested"))
             }
         }
         if (nestedElement.deleteDate) {
@@ -229,6 +234,7 @@ export function submitCommentForm() {
             let answer = apiService.postCreateComment(postId, objectForm);
             answer.then((data) => {
                 if (data.body) {
+                    location.reload();
                     console.log(data);
 
                 } else if (data.error) {
